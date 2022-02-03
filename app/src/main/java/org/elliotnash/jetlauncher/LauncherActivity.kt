@@ -23,22 +23,13 @@ class LauncherActivity : ComponentActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         super.onCreate(savedInstanceState)
         setContent {
-            val systemUiController = rememberSystemUiController()
-            //TODO make this based off wallpaper color
-            val darkIcons = !isSystemInDarkTheme()
-            SideEffect {
-                systemUiController.setSystemBarsColor(
-                    color = Color.Transparent,
-                    darkIcons = darkIcons
-                )
-            }
             JetLauncherTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Text("")
+                    Text("I'm dumb")
                 }
             }
         }
